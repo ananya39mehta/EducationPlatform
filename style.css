@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ECFFE6;
+}
+
+header {
+    background-color: #ECFFE6;
+    font-size: 1.25rem;
+    color: #324385;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+header.scrolled {
+    background-color: #41B06E; /* Change to desired color */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    border: #324285;
+    border-radius: 8px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #324285;
+    text-decoration: none;
+}
+
+.welcomeandgif {
+    display: flex;
+    flex-direction: column; /* Change to column layout for mobile */
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem; /* Adjust for fixed header height */
+}
+
+.girlgif {
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* Adjust to fit within the container */
+    align-self: auto;
+}
+
+.welcome-box {
+    border: 4px solid #41B06E;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: justify;
+    width: 100%; /* Adjust to fit within the container */
+    margin: 20px 0; /* Adjust margins */
+}
+
+main {
+    padding: 2rem;
+    padding-top: 10rem; /* Adjust for fixed header height */
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #ECFFE6;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.course-boxes {
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px solid #41B06E;
+    gap: 1rem;
+}
+
+.course-box {
+    background-color: #65e285;
+    color: rgb(10, 10, 10);
+    padding: 1rem;
+    height: 100px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+    flex: 1 1 calc(33.333% - 1rem);
+    cursor: pointer;
+}
+
+.course-box:hover {
+    background-color: #324285;
+}
+
+#verification-result {
+    margin-top: 1rem;
+    padding: 1rem;
+   
+}
+
+footer {
+    background-color: #399918;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#about{
+    border: 4px solid #399918;
+}
+
+/* Contact Us Section */
+#contact p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#contact i {
+    color: #399918;
+}
+
+#contact a {
+    color: #399918;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+    .welcomeandgif {
+        flex-direction: row;
+    }
+
+    .welcome-box {
+        width: 45%;
+    }
+
+    .girlgif {
+        width: 550px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .course-box {
+        flex: 1 1 100%;
+    }
+}
